@@ -16,9 +16,11 @@ export default function Home() {
     <>
       <Navigation />
       <HeroCarousel />
-      <main className="max-w-[1440px] mx-20 mb-12 mt-15">
-      <Categories />
-      <RecipeGrid />
+      <main className="w-full px-20">
+        <div className='flex-row max-w-[1440px] justify-self-center'>
+          <Categories />
+          <RecipeGrid />
+        </div>
       </main>
       <Footer />
     </>
