@@ -33,9 +33,7 @@ body {
 }
 
 h1 {
-  font-family: Inter;
-  font-weight: 600;
-  font-size: 2.5rem;
+  @apply font-semibold lg:text-5xl sm:text-4xl text-3xl
 }
 
 .logo {
@@ -46,7 +44,7 @@ h1 {
   font-size: 1.5rem;
 }
 .navLinks {
-    @apply text-foreground font-medium;
+    @apply text-foreground font-medium transform transition hover:-translate-y-1;
   }
 .btn {
     @apply px-4 py-2 bg-sky-100 text-black text-sm font-semibold rounded hover:bg-sky-200;

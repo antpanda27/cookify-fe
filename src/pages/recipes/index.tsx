@@ -351,9 +351,9 @@ export default function Recipes() {
 
   return (
     <>
-      <div className="flex-row max-w-400 px-20 justify-self-center mt-20">
-        <div className="grid grid-cols-2 items-center gap-10 pb-20">
-          <h1>Try this delicious recipe to make your day</h1>
+      <div className="flex-row max-w-400 px-20 max-lg:px-10 max-md:px-5 justify-self-center mt-20">
+        <div className="flex flex-col gap-2 text-center md:grid md:grid-cols-2 items-center md:gap-10 pb-20">
+          <h1>Delicous recipes for any moment</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
             ex, explicabo quasi repellendus.

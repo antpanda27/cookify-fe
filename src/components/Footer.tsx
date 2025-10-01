@@ -10,11 +10,10 @@ const lobster = Lobster({
 
 const Footer = () => {
   return (
-    <footer className="bg-background w-full mx-auto px-20 py-10">
+    <footer className="bg-background w-full mx-auto px-20 max-lg:px-5 py-10">
       <div className="max-w-[1440px] mx-auto mb-12 mt-15">
-        {/* Main footer content - Logo and menus in one line */}
-        <div className="flex items-center justify-between mb-12">
-          <div className={`${lobster.variable}`}>
+        <div className="flex items-center justify-between max-lg:justify-center mb-12">
+          <div className={`${lobster.variable} max-lg:text-center`}>
             <div className="logo">
               Cookify<span className="text-orange-600">.</span>
             </div>
@@ -23,7 +22,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <nav className="flex items-center space-x-12">
+          <nav className="flex items-center space-x-12 max-lg:hidden">
             <a href="/recipes" className="navLinks">
               Recipes
             </a>
@@ -40,14 +39,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom section - Copyright and socials */}
-        <div className="grid grid-cols-3 text-center justify-between pt-8">
-          <div className="col-start-2">
+        <div className="grid grid-cols-3 max-lg:grid-cols-1 text-center justify-between pt-8">
+          <div className="lg:col-start-2">
             <p className="text-foreground/60 ">
               © 2020 Flowbase. Powered by <span>Webflow</span>
             </p>
           </div>
 
-          <div className="flex items-center space-x-6 justify-self-end col-start-3">
+          <div className="flex items-center space-x-6 justify-self-end col-start-3 max-lg:hidden">
             <a href="#">
               <FaFacebook size={20} />
             </a>

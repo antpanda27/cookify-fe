@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import { User, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { PiForkKnifeFill, PiTimerFill } from "react-icons/pi";
 import { recipes } from "@/pages/recipes/index";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 // Utility for merging Tailwind classes (like the cn utility in shadcn)
@@ -13,12 +11,9 @@ const cn = (...classes: Array<string | false | null | undefined>) =>
 const FeaturedRecipe = () => {
   const FEATURED_RECIPE_ID = 17;
 
-  // ⬅️ 2. FIND THE RECIPE DIRECTLY
   const recipe = recipes.find((r) => r.id === FEATURED_RECIPE_ID);
 
-  // ⬅️ 3. SIMPLIFIED NOT FOUND CHECK
   if (!recipe) {
-    // If recipe is not found in the mock data, return a message
     return (
       <div>
         Featured Recipe (ID {FEATURED_RECIPE_ID}) not found in data source!
@@ -27,7 +22,7 @@ const FeaturedRecipe = () => {
   }
 
   return (
-    <div className="flex items-center justify-center p-4 sm:p-8">
+    <div className="flex items-center justify-center px-0 py-4 sm:p-8">
       <div className="max-w-[1440px] w-full rounded-3xl overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 relative">
           {/* LEFT COLUMN: CONTENT (Light Mint Background) */}
@@ -46,7 +41,7 @@ const FeaturedRecipe = () => {
             </h1>
 
             {/* Description */}
-            <p className="text-gray-600 max-w-lg mb-10 text-lg">
+            <p className="text-gray-600 max-w-lg mb-10 text-sm lg:text-lg">
               {recipe.description}
             </p>
 
@@ -87,10 +82,12 @@ const FeaturedRecipe = () => {
               </div>
 
               {/* View Recipes Button */}
-              <Link href={`/recipes/${recipe.id}`}><button className="flex items-center space-x-2 bg-black text-white font-semibold px-6 py-3 rounded-full hover:bg-gray-800 transition cursor-pointer shadow-lg">
-                <span>View Recipes</span>
-                <ChevronRight className="w-4 h-4" />
-              </button></Link>
+              <Link href={`/recipes/${recipe.id}`}>
+                <button className="flex items-center space-x-2 bg-black text-white font-semibold px-6 py-3 rounded-full hover:bg-gray-800 transition cursor-pointer shadow-lg">
+                  <span>View Recipes</span>
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -106,17 +103,20 @@ const FeaturedRecipe = () => {
                 fill
               />
             </div>
+          </div>
 
-            {/* Handpicked Badge (Absolute Positioned) */}
-            <div className="absolute top-1/2 left-[1%] -translate-y-[199%] z-20">
-              <Image
-                src="/assets/hero/badge.png"
-                alt="Handpicked"
-                width={128}
-                height={128}
-                className="shadow-lg select-none justify-center"
-              />
-            </div>
+          {/* Handpicked Badge (Absolute Positioned) */}
+          <div
+            className="absolute top-20 left-[80%] -translate-x-1/2 -translate-y-1/2 z-30 lg:top-1/5 lg:left-[50%] lg:-translate-x-1/2 lg:-translate-y-1/2 lg:z-30"
+            style={{ marginLeft: "1%" }}
+          >
+            <Image
+              src="/assets/hero/badge.png"
+              alt="Handpicked"
+              width={128}
+              height={128}
+              className="select-none justify-center"
+            />
           </div>
         </div>
       </div>

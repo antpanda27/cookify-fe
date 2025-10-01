@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 
 const Instagram = () => {
   return (
-    <div className="mt-40 text-center justify-items-center p-20">
+    <div className="mt-40 text-center justify-items-center p-20 max-lg:px-10 max-md:px-5">
       <div className="max-w-210">
         <h1>Check out @foodieland on Instagram</h1>
         <p className="text-base">

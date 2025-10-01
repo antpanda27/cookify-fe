@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <HeroCarousel />
       <main className="w-full">
-        <div className="flex-row max-w-400 px-20 justify-self-center">
+        <div className="flex-row max-w-400 px-20 max-lg:px-10 max-md:px-5 justify-self-center">
           {/* <Categories /> */}
           <RecipeGrid />
           <LearnMore />
@@ -29,7 +29,7 @@ export default function Home() {
         <div className="bg-gradient-to-t from-sky-100 to-white">
           <Instagram />
         </div>
-        <div className="flex-row max-w-400 px-20 justify-self-center">
+        <div className="flex-row max-w-400 px-20 max-lg:px-10 max-md:px-5 justify-self-center">
           <DeliciousRecipeGrid />
         </div>
       </main>
