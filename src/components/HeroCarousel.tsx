@@ -10,6 +10,8 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import FeaturedRecipe from "./FeaturedRecipe";
 
 const HeroCarousel = () => {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -33,7 +35,7 @@ const HeroCarousel = () => {
         <CarouselContent className="-ml-5">
           {Array.from({ length: 3 }).map((_, index) => (
             <CarouselItem key={index} className="pl-5 basis-3/5">
-              <Card
+              <div
                 className={cn(
                   "bg-primary text-primary-foreground transition-all duration-500",
                   {
@@ -42,10 +44,8 @@ const HeroCarousel = () => {
                   }
                 )}
               >
-                <CardContent className="flex max-w-[1440px] aspect-2/1 items-center justify-center p-6">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
+                  <FeaturedRecipe />
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>

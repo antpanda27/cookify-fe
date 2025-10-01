@@ -15,13 +15,13 @@ const Navigation = () => {
         {/* Navigation Links */}
         <div className="flex items-center space-x-12">
           <Link
-            href="#"
+            href="/"
             className="navLinks transform transition hover:-translate-y-1"
           >
             Home
           </Link>
           <Link
-            href="#"
+            href="/recipes"
             className="navLinks transform transition hover:-translate-y-1"
           >
             Recipes

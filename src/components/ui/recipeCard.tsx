@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PiHeartFill, PiTimerFill, PiForkKnifeFill } from "react-icons/pi";
 import { Card, CardContent, CardTitle } from "./card";
+import Image from "next/image";
 
 const recipeCard = () => {
   const [isSaved, setIsSaved] = useState(false);
@@ -12,8 +13,8 @@ const recipeCard = () => {
   return (
     <div>
       <Card className="border-0 bg-gradient-to-t from-sky-100 to-white">
-        <CardContent className="grid w-[400px] aspect-[0.46] fill items-center justify-center gap-6">
-          <div className="relative">
+        <CardContent className="grid fill items-center justify-center gap-6">
+          <div className="w-100 aspect-[0.46]">
             <div
               onClick={handleSaveClick}
               className="absolute top-2 right-2 z-10"
@@ -24,10 +25,10 @@ const recipeCard = () => {
                 <PiHeartFill className="text-gray-300 bg-white text-4xl p-1.5 rounded-full" />
               )}
             </div>
-            <img
+            <Image
               src="/assets/image_26.png"
               alt="recipe"
-              className=" aspect-[1.48] max-lg:h-5 rounded-xl object-center"
+              className="aspect-[1.48] w-full p-2 rounded-xl object-center"
             />
           </div>
           <div>

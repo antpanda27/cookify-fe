@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
 
           <nav className="flex items-center space-x-12">
-            <a href="#recipes" className="navLinks">
+            <a href="/recipes" className="navLinks">
               Recipes
             </a>
             <a href="#blog" className="navLinks">
